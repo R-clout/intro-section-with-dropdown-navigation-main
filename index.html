@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="./src/output.css" rel="stylesheet" />
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body class="font-epilogue relative" x-data="snapHomepage">
+  <section class="absolute top-0 right-0 w-[70%] z-20 h-fit bg-grey50 flex flex-col p-4 text-grey500 " x-show="sidemenu"
+    x-cloak @click.outside="sidemenu =false" x-transition.start.opacity.300ms>
+    <button class="self-end" @click="sidemenu = false">
+      <img src="./images/icon-close-menu.svg" class="">
+    </button>
+    <div class="p-3">
+      <div class="">
+        <div class="flex items-center gap-3" @click="dropdown = !dropdown">
+          <p>Features</p>
+          <div>
+            <img src="./images/icon-arrow-up.svg" alt="drop-down open">
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 p-5" x-show="dropdown">
+          <div class="flex items-start gap-2">
+            <img src="./images/icon-todo.svg" alt="todo-icon" />
+            <p>Todo List</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <img src="./images/icon-calendar.svg" alt="calendar-icon" />
+            <p>Calendar</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <img src="./images/icon-reminders.svg" alt="remainders-icon" />
+            <p>Reminder</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <img src="./images/icon-planning.svg" alt="planning-icon" />
+            <p>Planning</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center gap-3">
+          <p>Company</p>
+          <div>
+            <img src="./images/icon-arrow-up.svg" alt="drop-down open">
+          </div>
+        </div>
+        <div class="p-5 flex flex-col gap-2">
+          <p>History</p>
+          <p>Our Team</p>
+          <p>Blog</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="font-medium">Careers</p>
+        <p class="font-medium">About</p>
+      </div>
+      <div class="flex flex-col gap-3 my-3">
+        <button>
+          Login
+        </button>
+        <button class="border-grey900 bg-grey50 border-2 p-2 rounded-lg">
+          Register
+        </button>
+      </div>
+    </div>
+  </section>
+  <header class="flex justify-between p-5 items-start">
+    <img src="./images/logo.svg" alt="logo">
+    <button class="" x-model="sidemenu" x-on:click="sidemenu = !sidemenu">
+      <img src="./images/icon-menu.svg" alt="open-menu">
+    </button>
+  </header>
+  <main>
+    <section>
+      <img src="./images/image-hero-mobile.png" alt="mobile-hero" class="">
+    </section>
+    <section class="text-center my-6 flex flex-col gap-3 items-center">
+      <h1 class="text-[2rem] font-bold">Make remote work</h1>
+      <p class="text-[1.1rem] text-grey500">Get your team in sync, no matter your location. Streamline processes,
+        create
+        team
+        rituals, and watch
+        productivity soar.</p>
+      <button class="bg-grey900 text-grey50 p-3 rounded-lg w-fit">Learn more</button>
+    </section>
+    <section class="grid grid-cols-4 gap-x-5 p-2 items-center">
+      <img src="./images/client-databiz.svg" alt="databiz-icon" />
+      <img src="./images/client-audiophile.svg" alt="audiophile-icon" />
+      <img src="./images/client-meet.svg" alt="meet-icon" />
+      <img src="./images/client-maker.svg" alt="maker-icon" />
+    </section>
+  </main>
+  <script src="./script.js">
+
+  </script>
+</body>
+
+</html>

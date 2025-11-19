@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-grey50: hsl(0, 0%, 98%);
+  --color-grey500: hsl(0, 0%, 41%);
+  --color-grey900: hsl(0, 0%, 8%);
+
+  --font-epilogue: "Epilogue", sans-serif;
+}
+
+[x-cloak] {
+  display: none !important;
+}
