@@ -1,6 +1,7 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('snapHomepage', () => ({
         sidemenu: false,
-        dropdown: true
+        dropdown: false,
+        anotherdropdown: false,
     }))
 })
